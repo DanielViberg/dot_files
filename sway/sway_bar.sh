@@ -61,11 +61,9 @@ else
 fi
 
 # Cpu
-cpu_usage=$(top -bn1 | awk '/Cpu/ { print $2}')
-# If cpu_usage length is less than 4 then add space before it
-if [ ${#cpu_usage} -lt 4 ];
-then
-  cpu_usage=" $cpu_usage"
-fi
+cpu_usage_us=$(top -bn1 | awk '/Cpu/ { print $2}' | tr , .)
+cpu_usage_sy=$(top -bn1 | awk '/Cpu/ { print $4}' | tr , .)
+cpu_usage=$(echo $cpu_usage_us + $cpu_usage_sy | bc)
+cpu_usage=$(printf "%4s" $cpu_usage)
 
 echo "VOL:$volume_status $volume_level | BAT: $battery_charge $battery_rate| CPU: $cpu_usage% | BLU: $bluetooth_status | NET: $network_type ($networl_name) | $date_and_week $current_time"
