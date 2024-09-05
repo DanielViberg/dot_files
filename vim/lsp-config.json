@@ -13,7 +13,7 @@
       "path": "intelephense",
       "args": ["--stdio"],
       "initializationOptions": {
-          "licenceKey": "00691CWRTNYHF0B"
+          "licenceKey": ""
       },
       "workspaceConfig": {
         "intelephense": {
