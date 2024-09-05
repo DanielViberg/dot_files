@@ -68,11 +68,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# Show git branch 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
