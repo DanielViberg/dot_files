@@ -1,0 +1,7 @@
+ignore-empty-password
+color=000000
+indicator-radius=100
+indicator-thickness=5
+indicator-idle-visible
+font=DejaVu Sans Mono
+font-size=20
