@@ -1,0 +1,27 @@
+snippet for "for ($i = 0; $i < $count; $i++) { ... }"
+for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+	${0:${VISUAL}}
+}
+endsnippet
+snippet foreach "foreach ($var as $value) { .. }"
+foreach ($${1:variable} as $${2:value}) {
+	${0:${VISUAL}}
+}
+endsnippet
+snippet try "try { ... } catch (Exception $e) { ... }"
+try {
+	${0:${VISUAL}}
+} catch (${1:Exception} $e) {
+}
+endsnippet
+snippet switch "switch($var) { case 'xyz': ... default: .... }"
+switch ($${1:variable}) {
+	case '${2:value}':
+		${3}
+		break;
+	${0}
+	default:
+		${4}
+		break;
+}
+endsnippet
