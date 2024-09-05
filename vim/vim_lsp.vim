@@ -62,5 +62,15 @@ augroup END
 
 var file = $VIM_CONFIG .. '/lsp-config.json'
 var config = json_decode(join(readfile(file), "\n"))
+
+# Set license
+for server in config.servers
+  if has_key(server, 'path')
+    if server.path == 'intelephense'
+      server.initializationOptions.licenseKey = $INTELEPHENSE_LIC
+    endif
+  endif
+endfor
+
 autocmd VimEnter * call LspAddServer(config.servers)
 
