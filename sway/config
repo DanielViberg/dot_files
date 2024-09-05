@@ -246,7 +246,7 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 # Lockscreen
-bindsym $mod+Shift+l exec swaylock -f -c 000000
+bindsym $mod+Shift+l exec systemctl suspend
 
 # Sleep on power button
 # Edit /etc/systemd/logind.conf
