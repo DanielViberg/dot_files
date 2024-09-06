@@ -30,7 +30,7 @@
       "args": ["--stdio"],
       "initializationOptions": {
           "typescript": {
-              "tsdk": "/home/daniel/.nvm/versions/node/v20.16.0/lib/node_modules/typescript/lib"
+              "tsdk": "/home/daniel//repos/tools/node-v20.17.0-linux-x64/lib/node_modules/typescript/lib"
           },
           "vue": {
             "hybridMode": false

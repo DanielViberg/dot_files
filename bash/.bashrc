@@ -130,10 +130,8 @@ export VISUAL=vim
 set -o vi
 export EDITOR="$VISUAL"
 
-# Nvm (makes slow init - disabled temporarily)
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Npm
+export PATH="$PATH:$HOME/repos/tools/node-v20.17.0-linux-x64/bin"
 
 # NVim
 export PATH="$PATH:/opt/nvim-linux64/bin"
