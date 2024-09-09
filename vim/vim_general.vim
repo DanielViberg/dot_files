@@ -15,18 +15,18 @@ set hlsearch!
 set splitright
 set splitbelow
 
-set belloff       = all
-set tabstop       = 2
-set shiftwidth    = 2
-set softtabstop   = 2
-set ttimeoutlen   = 0
-set colorcolumn   = 100
-set wildmode      = longest:full
-set wildoptions   = pum
-set scrolloff     = 10
-set backspace     = indent,eol,start
-set termwinscroll = 1000
-set pumheight     = 20
+set belloff=all
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set ttimeoutlen=0
+set colorcolumn=100
+set wildmode=longest:full
+set wildoptions=pum
+set scrolloff=10
+set backspace=indent,eol,start
+set termwinscroll=1000
+set pumheight=20
 
 filetype plugin on
 
@@ -67,7 +67,7 @@ if !has('win32')
 endif
 
 # Statusline
-set laststatus    = 2
+set laststatus=2
 g:tene_glyphs     = 0
 g:tene_file_tail  = 0
 g:tene_unicode    = 0
