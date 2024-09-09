@@ -1,31 +1,32 @@
 vim9script 
 
 set number
-set belloff=all
+set undofile
+set autoread
+set incsearch
+set relativenumber
+set wildmenu
 set smartindent
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
 set expandtab
 set nowrap
 set ttimeout
-set ttimeoutlen=0
-set colorcolumn=100
-set wildmenu
-set wildmode=longest:full
-set wildoptions=pum
-set relativenumber
 set smartcase
-set scrolloff=10
-set backspace=indent,eol,start
-set incsearch
 set hlsearch!
 set splitright
 set splitbelow
-set termwinscroll=1000
-set pumheight=20
-set undofile
-set autoread
+
+set belloff       = all
+set tabstop       = 2
+set shiftwidth    = 2
+set softtabstop   = 2
+set ttimeoutlen   = 0
+set colorcolumn   = 100
+set wildmode      = longest:full
+set wildoptions   = pum
+set scrolloff     = 10
+set backspace     = indent,eol,start
+set termwinscroll = 1000
+set pumheight     = 20
 
 filetype plugin on
 
@@ -66,11 +67,11 @@ if !has('win32')
 endif
 
 # Statusline
-set laststatus=2
-g:tene_glyphs = 0
-g:tene_file_tail = 0
-g:tene_unicode = 0
-g:tene_path = 0
+set laststatus    = 2
+g:tene_glyphs     = 0
+g:tene_file_tail  = 0
+g:tene_unicode    = 0
+g:tene_path       = 0
 g:tene_buffer_num = 0
 g:tene_window_num = 0
 
@@ -123,9 +124,9 @@ tnoremap <silent> <expr> <C-down> TtabClose()
 tnoremap <silent> <expr> <C-up> TtabNew()
 
 # md preview
-g:mkdp_filetypes = ['markdown']
+g:mkdp_filetypes  = ['markdown']
 g:mkdp_page_title = '${name}'
-g:mkdp_theme = 'dark'
+g:mkdp_theme      = 'dark'
 
 # Buffer
 command! BufferBack :execute # b##  
@@ -141,10 +142,10 @@ cnoreabbr <silent> bf :FuzzyBuffers
 g:fuzzyy_files_ignore_dir = ['.git', 'node_modules', 'vendor', 'docker']
 
 # Explorer
-g:netrw_liststyle = 1 
-g:netrw_banner = 0
+g:netrw_liststyle  = 1
+g:netrw_banner     = 0
 g:netrw_localrmdir = 'rm -r'
-g:netrw_sort_by = 'exten'
+g:netrw_sort_by    = 'exten'
 nnoremap <silent> <C-b> :50Vex<cr>
 
 # Sudo
@@ -152,8 +153,8 @@ cmap w!! w !sudo tee > /dev/null %
 
 # Easy jump
 g:easyjump_default_keymap = false
-g:easyjump_case = 'icase'
-g:easyjump_letters = 'asdfgwercvhjkluiopynmbtqxz0123456789'
+g:easyjump_case           = 'icase'
+g:easyjump_letters        = 'asdfgwercvhjkluiopynmbtqxz0123456789'
 nmap f <Plug>EasyjumpJump;
 omap f <Plug>EasyjumpJump;
 vmap f <Plug>EasyjumpJump;
@@ -165,10 +166,13 @@ cnoreabbr <silent> du :DevdocsUninstall
 
 # Copilot
 g:copilot_filetypes = {
-  'markdown': false, 
-  'env': false,
-  'text': false,
+  'markdown': false,
+  'env':      false,
+  'text':     false,
 }
+
+# EasyAlign
+xmap ea <Plug>(EasyAlign)
 
 # Workspace
 def MkWFolder(dir: string): void
@@ -179,15 +183,15 @@ enddef
 
 MkWFolder($HOME .. "/.vim/ses/")
 
-g:workspace_autosave = 0
-g:workspace_persist_undo_history = 0
-g:workspace_session_directory = $HOME .. "/.vim/ses/" 
+g:workspace_autosave                = 0
+g:workspace_persist_undo_history    = 0
+g:workspace_session_directory       = $HOME .. "/.vim/ses/"
 g:workspace_session_disable_on_args = 1
 
 # Set custome dir for .backup .swp .undo
 var backupDir = $HOME .. "/.vim/backup"
-var swpDir = $HOME .. "/.vim/swp"
-var undoDir = $HOME .. "/.vim/undo"
+var swpDir    = $HOME .. "/.vim/swp"
+var undoDir   = $HOME .. "/.vim/undo"
 
 MkWFolder(backupDir)
 MkWFolder(swpDir)

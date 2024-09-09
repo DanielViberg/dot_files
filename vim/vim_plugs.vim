@@ -13,5 +13,6 @@ Plug 'Donaldttt/fuzzyy'
 Plug 'chrisbra/Colorizer'
 Plug 'w0ng/vim-hybrid'
 Plug 'rose-pine/vim'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
