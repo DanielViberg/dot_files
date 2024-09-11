@@ -248,8 +248,12 @@ set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
-# Lockscreen
-bindsym $mod+Shift+l exec systemctl suspend
+# Lockscreen, sleep after lock
+bindsym $mod+Shift+l exec swaylock -f -c 000000 && systemctl suspend
+
+# Activity logger
+for_window [title="General"] floating enable, sticky enable, resize set 15 ppt 35 ppt, border pixel 5
+exec $term --title="General" -- /home/daniel/repos/DanielViberg/ActivityLogger/start.sh
 
 # Sleep on power button
 # Edit /etc/systemd/logind.conf
