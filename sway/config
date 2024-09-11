@@ -15,10 +15,13 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term gnome-terminal
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 40 ppt, border pixel 1
+set $menu exec foot -a launcher -f "DejaVu Sans Mono:size=14" -e env GLYPH_COMMAND="" GLYPH_DESKTOP="" GLYPH_PROMPT="? " /home/daniel/repos/tools/sway-launcher-desktop/sway-launcher-desktop.sh
 
 include /etc/sway/config-vars.d/*
 
