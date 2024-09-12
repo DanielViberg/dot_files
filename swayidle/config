@@ -1,3 +1,0 @@
-before-sleep '$HOME/repos/DanielViberg/ActivityLogger/stop.sh'
-after-resume '$HOME/repos/DanielViberg/ActivityLogger/start.sh'
-
