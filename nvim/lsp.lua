@@ -53,6 +53,10 @@ require('lspconfig').lua_ls.setup({
 -- Read lic keu from file
 local file = os.getenv("NVIM_CONFIG") .. "/.lic/php"
 local fileContent = io.open(file, "r")
+if fileContent == nil then
+	print("No license key found for PHP")
+	return
+end
 local licenseKey = fileContent:read("*a")
 fileContent:close()
 licenseKey = string.gsub(licenseKey, "\n", "")
