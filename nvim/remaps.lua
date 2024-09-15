@@ -54,6 +54,7 @@ vim.api.nvim_set_keymap('c', '<Down>', '<C-n>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<Up>', '<C-p>', { noremap = true })
 
 -- Command remaps
+-- In command mode, but never in search mode, make new be vnew	
 vim.cmd('cnoreabbrev new vnew')
 vim.cmd('abb ter hor ter')
 
