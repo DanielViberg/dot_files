@@ -86,11 +86,11 @@ require('lspconfig').volar.setup({
 })
 
 -- Typescript
-require('lspconfig').tsserver.setup({
+require('lspconfig').ts_ls.setup({
 	init_options = {
 		plugins = { {
 			name = "@vue/typescript-plugin",
-			location = "/repos/tools/node-v20.17.0-linux-x64/lib/node_modules/@vue/typescript-plugin",
+			location = "home/daniel/repos/tools/node-v20.17.0-linux-x64/lib/node_modules/@vue/typescript-plugin",
 			languages = {
 				"typescript",
 				"javascript",
@@ -99,7 +99,7 @@ require('lspconfig').tsserver.setup({
 		},
 		},
 		tsserver = {
-			tsdk = "/repos/tools/node-v20.17.0-linux-x64/lib/node_modules/typescript/lib"
+			tsdk = "home/daniel/repos/tools/node-v20.17.0-linux-x64/lib/node_modules/typescript/lib"
 		},
 	},
 	root_dir = require('lspconfig.util').root_pattern("package.json", "vue.config.js", ".git"),
