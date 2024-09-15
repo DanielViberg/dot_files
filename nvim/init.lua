@@ -13,6 +13,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local config = os.getenv("NVIM_CONFIG")
+if config == nil then
+	print("NVIM_CONFIG not set")
+	return
+end
 package.path = package.path .. ";" .. config .. "/?.lua"
 
 require("plugins")
