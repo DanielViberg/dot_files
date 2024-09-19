@@ -176,6 +176,10 @@ g:copilot_filetypes = {
 # EasyAlign
 xmap ea <Plug>(EasyAlign)
 
+# Clipboard
+autocmd TextYankPost * call system('wl-copy', @0)
+nnoremap <silent> p :r !wl-paste<CR>
+
 # Workspace
 def MkWFolder(dir: string): void
   if !isdirectory(dir)
