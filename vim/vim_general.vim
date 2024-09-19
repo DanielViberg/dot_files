@@ -92,38 +92,14 @@ cabbrev new vnew
 autocmd VimResized * silent execute 'horizontal wincmd ='  
 
 # Tabs
-def TtTabPrevious()
-  if (mode() == 't') 
-    return "\<C-\>\<C-n>:tabprevious\<CR>"
-  endif
-enddef
-
-def TtabNext()
-  if (mode() == 't') 
-    return "\<C-\>\<C-n>:tabnext\<CR>"
-  endif
-enddef
-
-def TtabClose()
-  if (mode() == 't') 
-    return "\<C-\>\<C-n>:q!\<CR>"
-  endif
-enddef
-
-def TtabNew()
-  if (mode() == 't') 
-    return "\<C-\>\<C-n>:tabnew\<CR>"
-  endif
-enddef
-
 nnoremap <silent> <PageUp> :tabprevious<CR>
 nnoremap <silent> <PageDown> :tabnext<CR>
 nnoremap <silent> <C-down> :tabclose<CR>
 nnoremap <silent> <C-up> :tabnew<CR>
-tnoremap <silent> <expr> <PageUp> TtTabPrevious()
-tnoremap <silent> <expr> <PageDown> TtabNext()
-tnoremap <silent> <expr> <C-down> TtabClose()
-tnoremap <silent> <expr> <C-up> TtabNew()
+tnoremap <silent> <expr> <PageUp> "<C-\><C-n>:tabprevious \<CR>"
+tnoremap <silent> <expr> <PageDown> "<C-\><C-n>:tabnext \<CR>"
+tnoremap <silent> <expr> <C-down> "<C-\><C-n>:q! \<CR>"
+tnoremap <silent> <expr> <C-up> "<C-\><C-n>:tabnew \<CR>"
 
 # md preview
 g:mkdp_filetypes  = ['markdown']
