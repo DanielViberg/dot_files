@@ -151,7 +151,7 @@ xmap ea <Plug>(EasyAlign)
 # Clipboarde
 if has('unix')
  autocmd TextYankPost * call job_start('wl-copy ' .. getreg('0'))
- nnoremap <silent> p :r !wl-paste<CR>
+ nnoremap <silent> cp :r !wl-paste<CR>
 endif
 
 # Workspace
