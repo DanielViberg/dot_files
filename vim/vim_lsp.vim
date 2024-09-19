@@ -56,7 +56,7 @@ augroup END
 # npm i -g typescript
 # npm i -g vscode-json-languageserver
 # npm i -g bash-language-server
-# npm i -g vscode-html-languageserver-bin
+# npm i -g vscode-html-language-server
 # sudo snap install marksman 
 # sudo apt install clangd
 

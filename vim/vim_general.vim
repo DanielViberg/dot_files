@@ -176,8 +176,8 @@ g:copilot_filetypes = {
 # EasyAlign
 xmap ea <Plug>(EasyAlign)
 
-# Clipboard
-autocmd TextYankPost * call system('wl-copy', @0)
+# Clipboarde
+autocmd TextYankPost * call job_start('wl-copy ' .. getreg('0'))
 nnoremap <silent> p :r !wl-paste<CR>
 
 # Workspace

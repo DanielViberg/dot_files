@@ -84,13 +84,15 @@
     {
       "name": "html-ls",
       "filetype": ["html"],
-      "path": "html-languageserver",
+      "path": "vscode-html-language-server",
       "args": ["--stdio"],
       "initializationOptions": {
+        "provideFormatter": true,
         "embeddedLanguages": {
           "css": true,
           "javascript": true
-        }
+        },
+        "configurationSection":  ["html", "css", "javascript"]
       }
     },
     {
