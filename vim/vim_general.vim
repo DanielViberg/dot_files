@@ -32,6 +32,7 @@ set pumheight=20
 filetype plugin on
 
 # Remap
+tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <Esc> :noh<CR>
 nnoremap <silent> <S-up> <Nop>
 nnoremap <silent> <S-down> <Nop>
