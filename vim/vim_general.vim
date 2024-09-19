@@ -74,6 +74,8 @@ g:tene_unicode    = 0
 g:tene_path       = 0
 g:tene_buffer_num = 0
 g:tene_window_num = 0
+g:tene_ga = {}
+g:tene_ga["line()"] = ['', '']
 
 # :fa - find all occurances of word under cursor
 silent command! FindAll execute 'normal! /' .. expand('<cword>') .. "\<CR>"

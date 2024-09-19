@@ -106,6 +106,12 @@ require('lspconfig').ts_ls.setup({
 	filetypes = { 'typescript', 'javascript', 'vue' },
 })
 
+-- Html
+require('lspconfig').html.setup({
+	init_options = {
+		configurationSection = { "html", "css" },
+	},
+})
 
 -- Bash
 require('lspconfig').bashls.setup({})

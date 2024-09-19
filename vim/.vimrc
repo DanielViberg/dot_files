@@ -14,4 +14,3 @@ source $VIM_CONFIG/vim_colors.vim
 
 # LSP
 source $VIM_CONFIG/vim_lsp.vim
-

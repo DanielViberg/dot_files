@@ -14,3 +14,6 @@ npm i -g typescript-language-server
 
 # Install clangd language server
 sudo apt install clangd -y
+
+# Html
+npm i -g vscode-langservers-extracted
