@@ -24,7 +24,7 @@ var lspOpts = {
   autoHighlight: true,
   omniComplete: true,
   useBufferCompletion: true,
-  snippetSupport: false,
+  snippetSupport: true, # Onlt because html lsp needs it
   ultisnipsSupport: false,
   showDiagWithVirtualText: true,
   diagVirtualTextAlign: 'after',

@@ -87,7 +87,6 @@
       "path": "vscode-html-language-server",
       "args": ["--stdio"],
       "initializationOptions": {
-        "provideFormatter": true,
         "embeddedLanguages": {
           "css": true,
           "javascript": true
@@ -103,6 +102,20 @@
       "features": {
         "diagnostics": false
       }
-    }
+    },
+    {
+      "name": "luals",
+      "filetype": "lua",
+      "path": "lua-language-server",
+      "args": [],
+      "initializationOptions": {
+        "Lua": {
+          "diagnostics": {
+            "enable": true,
+            "globals": ["vim"]
+          }
+        }
+      }
+     }
   ]
 }
