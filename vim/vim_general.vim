@@ -14,6 +14,7 @@ set smartcase
 set hlsearch!
 set splitright
 set splitbelow
+set exrc
 
 set belloff=all
 set tabstop=2
@@ -106,10 +107,13 @@ cnoreabbrev bB edit #
 cnoreabbrev BB edit #
 
 # Fuzzy
+g:fuzzyy_files_ignore_dir = ['.git', 'node_modules', 'vendor', 'docker']
+if has('win32')
+  g:files_only_git_files = true
+endif
 nnoremap <silent> <C-F> :FuzzyFiles<CR>
 nnoremap <silent> <S-F> :FuzzyGrep<CR>
 cnoreabbr <silent> bf :FuzzyBuffers
-g:fuzzyy_files_ignore_dir = ['.git', 'node_modules', 'vendor', 'docker']
 
 # Explorer
 g:netrw_liststyle  = 1
@@ -145,8 +149,10 @@ g:copilot_filetypes = {
 xmap ea <Plug>(EasyAlign)
 
 # Clipboarde
-autocmd TextYankPost * call job_start('wl-copy ' .. getreg('0'))
-nnoremap <silent> p :r !wl-paste<CR>
+if has('unix')
+ autocmd TextYankPost * call job_start('wl-copy ' .. getreg('0'))
+ nnoremap <silent> p :r !wl-paste<CR>
+endif
 
 # Workspace
 def MkWFolder(dir: string): void
