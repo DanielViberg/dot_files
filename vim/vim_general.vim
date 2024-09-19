@@ -30,15 +30,7 @@ set pumheight=20
 
 filetype plugin on
 
-def EscCond(): string
-  if mode() == 't'
-    return "\<C-\>\<C-n>"
-  endif
-  return "\<Esc>"
-enddef
-
 # Remap
-tnoremap <silent> <expr> <Esc> EscCond()
 nnoremap <silent> <Esc> :noh<CR>
 nnoremap <silent> <S-up> <Nop>
 nnoremap <silent> <S-down> <Nop>
