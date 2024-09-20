@@ -64,4 +64,8 @@ require("lazy").setup({
 			})
 		end
 	},
+	{
+		"seblj/roslyn.nvim",
+		ft = "cs",
+	}
 })
