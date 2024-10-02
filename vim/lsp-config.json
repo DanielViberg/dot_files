@@ -77,7 +77,7 @@
     {
       "name": "rust-ls",
       "filetype": ["rust"],
-      "path": "rust-analyzer",
+      "path": "rust-analyzer-linux",
       "args": [],
       "syncInit": true
     },

@@ -108,7 +108,6 @@ cnoreabbrev bB edit #
 cnoreabbrev BB edit #
 
 # Fuzzy
-g:fuzzyy_files_ignore_dir = ['.git', 'node_modules', 'vendor', 'docker']
 if has('win32')
   g:files_only_git_files = true
   g:fuzzyy_window_layout = { 'FuzzyFiles': { 'preview': 0 } }
@@ -116,6 +115,7 @@ endif
 nnoremap <silent> <C-F> :FuzzyFiles<CR>
 nnoremap <silent> <S-F> :FuzzyGrep<CR>
 cnoreabbr <silent> bf :FuzzyBuffers
+g:files_respect_gitignore = 1
 
 # Explorer
 g:netrw_liststyle  = 1
