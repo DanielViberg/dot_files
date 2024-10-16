@@ -8,6 +8,7 @@ g:UltiSnipsExpandTrigger = "<c-m>"
 g:UltiSnipsJumpForwardTrigger = "<s-tab>"
 
 #Lsp
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 nnoremap <silent> <C-m> :LspGotoDefinition<CR>
 cnoreabbrev ra LspRename
 cnoreabbrev fr LspPeekReferences  
@@ -40,6 +41,7 @@ var lspOpts = {
   diagSignHintText: "H:",
   diagSignWarningText: "W:",
   filterCompletionDuplicates: true,
+  useQuickfixForLocations: true,
 }
 
 autocmd VimEnter * call LspOptionsSet(lspOpts)
