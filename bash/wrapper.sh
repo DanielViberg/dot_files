@@ -90,4 +90,29 @@ function bluetooth-pair () {
   bluetoothctl trust $mac
 }
 
+# SOUND 
+function sound () {
+   echoInBold "Sound status:"
+   echo " "
+   echoInBold "Output devices:"
+   pacmd list-sinks | grep -e 'device.description' | grep -oP '"\K[^"]+'
+   echo " "
+   echoInBold "Input devices:"
+   pacmd list-sources | grep -e 'device.description' | grep -oP '"\K[^"]+'
+   echo " "
+}
+
+function sound-set-output () {
+  echoInBold "Available output devices:"
+  pacmd list-sinks | grep -e 'index:' -e 'device.description' 
+  read -p "Enter the output device name: " output
+  pacmd set-default-sink $output
+}
+
+function sound-set-input () {
+ echoInBold "Available input devices:"
+  pacmd list-sources | grep -e 'index:' -e 'device.description'
+  read -p "Enter the input device name: " input
+}
+
 
