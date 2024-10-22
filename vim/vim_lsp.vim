@@ -69,7 +69,7 @@ var config = json_decode(join(readfile(file), "\n"))
 for server in config.servers
   if has_key(server, 'path')
     if server.path == 'intelephense'
-      server.initializationOptions.licenseKey = $INTELEPHENSE_LIC
+      server.initializationOptions.licenceKey = $INTELEPHENSE_LIC
     endif
   endif
 endfor
